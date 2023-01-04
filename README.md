@@ -1,6 +1,8 @@
 # simpleExportData
 这是一款不考虑导出性能的单sheet页导出工具类
 
+适用于导出单sheet页20W左右的数据量
+
 如果你使用过easyexcel，那么你一定很容易就接纳这款工具
 
 导出效果如下：

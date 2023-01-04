@@ -44,4 +44,15 @@ DemoDataExportClass demoDataExportClass = new DemoDataExportClass(commonExportDa
 // 调用导出方法
 demoDataExportClass.export(demoDataExportClass.getCommonExportDataEntity());
 ```
+### controller代码示例如下：
+```
+    @RequestMapping("/exportData")
+	public void exportDemoData(HttpServletRequest request, HttpServletResponse response) {
+		HttpContext httpContext = new HttpContext(request, response);
+		CommonExportDataEntity commonExportDataEntity = new CommonExportDataEntity("simple导出示例", httpContext);
+		DemoDataExportClass demoDataExportClass = new DemoDataExportClass(commonExportDataEntity);
+		demoDataExportClass.export(demoDataExportClass.getCommonExportDataEntity());
+	}
+```
+
 ## 如此一来，就完成了导出工作。本示例启动项目后访问http://localhost:8080/demo/exportData 即可导出示例文件
